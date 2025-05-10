@@ -5,7 +5,7 @@
     "url": "https://github.com/0x0arash"
   },
   "description": "Easy jsonLd schemas for Next.js and React",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "homepage": "https://github.com/0x0arash/next-schema",
   "repository": {
