@@ -56,7 +56,6 @@ The following scripts are available in `package.json`:
 ## Project Structure
 
 ```plaintext
-c:\Users\ghorb\repos\next-schema\
 ├── packages\
 │   └── next-schema\
 │       ├── src\
