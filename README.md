@@ -1,13 +1,22 @@
 # Next Schema
 
+A type-safe React component for injecting JSON-LD structured data in Next.js apps using [schema-dts](https://github.com/google/schema-dts).
+
 ## What
 
-`next-schema` provides a simple utility to inject JSON-LD structured data into your Next.js applications using the schema-dts definitions. It is built with TypeScript and React, ensuring type-safety and efficient rendering.
+`next-schema` is a lightweight React component built with TypeScript that allows you to inject JSON-LD structured data into your Next.js applications. It leverages the [`schema-dts`](https://github.com/google/schema-dts) library to provide type-safe schema definitions, ensuring your structured data is valid and easy to maintain.
+
+## Features
+
+- Type-safe JSON-LD schemas powered by [`schema-dts`](https://github.com/google/schema-dts)
+- Simple React component interface
+- Seamless integration with Next.js
+- Lightweight and zero runtime dependencies (only Typescript types)
 
 ## Why
 
 - Simplify the integration of JSON-LD schema markup in Next.js projects.
-- Provide a type-safe interface using schema-dts to generate structured data.
+- Provide a type-safe interface using [`schema-dts`](https://github.com/google/schema-dts) to generate structured data.
 
 ## Where
 
@@ -23,7 +32,7 @@ yarn add next-schema
 
 ## How
 
-Import and use the `JsonLdSchema` component to embed JSON-LD data in your pages or components. The types for the schema property are inferred, so you don't need to import them manually.
+Import and use the `JsonLdSchema` component to embed JSON-LD data in your pages or components. The `schema` prop is fully typed using [`schema-dts`](https://github.com/google/schema-dts), so you get autocomplete and type safety without extra imports.
 
 ```tsx
 import { JsonLdSchema } from "next-schema";
@@ -40,11 +49,14 @@ export default function HomePage() {
           url: "https://www.example.com",
         }}
       />
-      {/* ...existing code... */}
     </div>
   );
 }
 ```
+
+## Usage with Next.js
+
+The `JsonLdSchema` component works seamlessly with Next.js, supporting both client-side and server-side rendering. Simply include it in your page components or `_app.tsx` to inject structured data.
 
 ## Scripts
 
@@ -56,11 +68,11 @@ The following scripts are available in `package.json`:
 ## Project Structure
 
 ```plaintext
-├── packages\
-│   └── next-schema\
-│       ├── src\
+├── packages/
+│   └── next-schema/
+│       ├── src/
 │       │   └── schema.tsx
-│       ├── dist\
+│       ├── dist/
 │       ├── tsconfig.json
 │       └── package.json
 └── README.md

@@ -1,55 +1,54 @@
 {
-    "name": "next-schema",
-    "author": {
-        "name": "Arash Ghorban",
-        "url": "https://github.com/0x0arash"
+  "name": "next-schema",
+  "author": {
+    "name": "Arash Ghorban",
+    "url": "https://github.com/0x0arash"
+  },
+  "description": "Easy jsonLd schemas for Next.js and React",
+  "version": "0.0.8",
+  "license": "MIT",
+  "homepage": "https://github.com/0x0arash/next-schema",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0x0arash/next-schema.git",
+    "directory": "packages/next-schema"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "json-ld",
+    "schema",
+    "schema.org",
+    "json-ld-schema"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
-    "description": "Easy jsonLd schemas for Next.js and React",
-    "version": "0.0.7",
-    "license": "MIT",
-    "homepage": "https://github.com/0x0arash/next-schema",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/0x0arash/next-schema.git",
-        "directory": "packages/next-schema"
-    },
-    "keywords": [
-        "nextjs",
-        "react",
-        "json-ld",
-        "schema",
-        "schema.org",
-        "json-ld-schema"
-    ],
-    "type": "module",
-    "scripts": {
-        "dev": "tsc --watch",
-        "build": "tsc"
-    },
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "default": "./dist/index.js"
-        },
-        "./schema": {
-            "types": "./dist/schema.d.ts",
-            "default": "./dist/schema.js"
-        }
-    },
-    "devDependencies": {
-        "@next-schema/typescript-config": "workspace:*",
-        "@types/node": "^22.15.3",
-        "@types/react": "^19.0.0",
-        "@types/react-dom": "^19.0.0",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
-        "typescript": "latest"
-    },
-    "peerDependencies": {
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0"
-    },
-    "dependencies": {
-        "schema-dts": "^1.1.5"
+    "./schema": {
+      "types": "./dist/schema.d.ts",
+      "default": "./dist/schema.js"
     }
+  },
+  "devDependencies": {
+    "@next-schema/typescript-config": "workspace:*",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "latest"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "schema-dts": "latest"
+  }
 }
